@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CelebrateAI — Intelligent Customer Engagement</title>
+
+  <!-- REQUIRED for mobile responsiveness -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+
+  <!-- Decorative Background Glow -->
+  <div class="bg-glow"></div>
+
+  <!-- Navigation -->
+  <nav>
+    <h1>
+      Celebrate<span class="ai">AI</span>
+    </h1>
+    <p>Intelligent customer celebration, automated.</p>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Left Content -->
+    <section class="content">
+      <h2>
+        Turn Customer Birthdays<br />
+        Into Meaningful Moments
+      </h2>
+
+      <p>
+        CelebrateAI helps businesses automatically send beautifully crafted
+        birthday messages to customers — on time, every year.
+      </p>
+
+      <ul>
+        <li>✔ Fully automated birthday checks</li>
+        <li>✔ Premium HTML email templates</li>
+        <li>✔ Zero manual tracking</li>
+      </ul>
+    </section>
+
+    <!-- Floating Form Card -->
+    <section class="card">
+      <form action="/add-user" method="POST">
+        <h3>Add a Customer</h3>
+
+        <label>Full Name</label>
+        <input
+          type="text"
+          name="username"
+          placeholder="John Doe"
+          required
+        />
+
+        <label>Email Address</label>
+        <input
+          type="email"
+          name="email"
+          placeholder="john@email.com"
+          required
+        />
+
+        <label>Date of Birth</label>
+        <input
+          type="date"
+          name="dob"
+          required
+        />
+
+        <button type="submit">
+          Save Customer
+        </button>
+
+        <small>
+          CelebrateAI respects privacy. No spam. Ever.
+        </small>
+      </form>
+    </section>
+  </main>
+
+</body>
+</html>

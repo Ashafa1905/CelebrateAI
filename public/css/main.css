@@ -1,0 +1,270 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(
+    180deg,
+    #e7f4ff 0%,
+    #f5fbff 100%
+  );
+  color: #0f172a;
+  overflow-x: hidden;
+}
+
+/* =========================
+   BACKGROUND DECORATION
+========================= */
+
+.bg-glow {
+  position: absolute;
+  top: -200px;
+  right: -200px;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(
+    circle,
+    rgba(79, 70, 229, 0.25),
+    transparent 70%
+  );
+  filter: blur(70px);
+  z-index: 0;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+  padding: 40px 80px;
+  position: relative;
+  z-index: 2;
+}
+
+nav h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+}
+
+nav .ai {
+  color: #4f46e5;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+nav p {
+  margin-top: 6px;
+  color: #475569;
+  font-size: 15px;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+main {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  padding: 60px 80px;
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================
+   LEFT CONTENT
+========================= */
+
+.content h2 {
+  font-size: 44px;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 18px;
+  color: #475569;
+  max-width: 520px;
+}
+
+.content ul {
+  margin-top: 30px;
+  padding: 0;
+  list-style: none;
+}
+
+.content li {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+/* =========================
+   FLOATING CARD
+========================= */
+
+.card {
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow:
+    0 40px 80px rgba(15, 23, 42, 0.15),
+    0 10px 20px rgba(15, 23, 42, 0.05);
+  backdrop-filter: blur(12px);
+  transform: translateY(-10px);
+}
+
+/* =========================
+   FORM
+========================= */
+
+form h3 {
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #334155;
+  margin-top: 18px;
+  display: block;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  margin-top: 6px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  font-size: 15px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+  width: 100%;
+  margin-top: 30px;
+  padding: 16px;
+  background: linear-gradient(
+    135deg,
+    #4f46e5,
+    #6366f1
+  );
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(79, 70, 229, 0.35);
+}
+
+small {
+  display: block;
+  margin-top: 18px;
+  font-size: 12px;
+  color: #64748b;
+  text-align: center;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 1024px) {
+  main {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    padding: 40px;
+  }
+
+  nav {
+    padding: 30px 40px;
+  }
+
+  .content h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 25px;
+    text-align: center;
+  }
+
+  nav p {
+    max-width: 320px;
+    margin: 10px auto 0;
+  }
+
+  main {
+    padding: 30px 20px;
+    gap: 50px;
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  .content p {
+    margin: auto;
+  }
+
+  .content ul {
+    display: inline-block;
+    text-align: left;
+  }
+
+  .card {
+    padding: 30px;
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  nav h1 {
+    font-size: 26px;
+  }
+
+  .content h2 {
+    font-size: 28px;
+  }
+
+  .content p {
+    font-size: 16px;
+  }
+
+  .card {
+    padding: 25px;
+    border-radius: 16px;
+  }
+
+  input,
+  button {
+    font-size: 15px;
+  }
+
+  .bg-glow {
+    display: none;
+  }
+}
